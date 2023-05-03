@@ -42,15 +42,19 @@ const app = Vue.createApp({
   },
 
   methods: {
-    addQuote(event) {
-      console.log(this.newQuote);
-      console.log(event);
 
-      if ((event.code = "Enter")) {
-        this.quotes.unshift({
-          quote: this.newQuote,
-        });
-      }
+    // destructuro el evento
+    // tomo el metodo y lo pongo en el boton html 
+    // 
+    addQuote({charCode}) {
+      console.log(this.newQuote);
+  
+      
+
+      this.quotes.unshift({
+        quote: this.newQuote,
+      })
+
     },
   },
   //   methods: {
